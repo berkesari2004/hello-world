@@ -5,9 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To do list</title>
+  <script>
+function addNewElement() {
 
-
-
+ const inputElement = document.getElementById('myInput');
+ console.log('YARRAK BERKE')
+ const formEl = document.getElementById("todo-form")
+ console.log(formEl)
+ const inputEl = document.createElement("input")
+ inputEl.type = "checkbox"
+ const labelEl = document.createElement("label")
+ labelEl.innerHTML = inputElement.value;
+ const brEl = document.createElement("br")
+formEl.appendChild(inputEl)
+formEl.appendChild(labelEl)
+formEl.appendChild(brEl)
+}
+  </script>
 </head>
 
 <body>
@@ -15,16 +29,36 @@
   <div id="myDIV" class="header">
     <h2>Yapilacaklar</h2>
     <input type="text" id="myInput" placeholder="Yazi Yazin...">
-    <span onclick="newElement()" class="addBtn">ekle</span>
+  <button onclick="addNewElement()">EKLE</button>
   </div>
+
+<form id="todo-form" action="">
+    
   
-  <ul id="myUL">
-    <li>spora git</li>
-    <li>okula git</li>
-    <li>markete git</li>
-    <li>kitap oku</li>
-    <li>sic</li>
-  </ul>
+  <input type="checkbox" id="1">
+  <label for="1">spora git</label>
+  <br\>
+
+  <input type="checkbox" id="2">
+  <label for="2">okula git</label>
+  <br\>
+
+  <input type="checkbox" id="3">
+  <label for="3">markete git</label>
+  <br\>
+
+  <input type="checkbox" id="4">
+  <label for="4">kitap oku</label>
+
+  <input type="checkbox">
+  <label for="4">sic</label>
+
+  </form>
+
+
+  
+  
+  
   
 </body>
 </html>
